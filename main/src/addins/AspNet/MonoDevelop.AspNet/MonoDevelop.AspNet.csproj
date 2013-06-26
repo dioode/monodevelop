@@ -209,6 +209,9 @@
     <EmbeddedResource Include="Templates\WebContentForm.xft.xml">
       <LogicalName>WebContentForm.xft.xml</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="Templates\EmptyCSSFile.xft.xml">
+      <LogicalName>EmptyCSSFile.xft.xml</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MonoDevelop.AspNet\AspNetAppProject.cs" />

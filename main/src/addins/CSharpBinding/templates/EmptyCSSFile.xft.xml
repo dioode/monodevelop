@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml version="1.0"?>
+<Template Originator="Diyoda Sajjana" Language="CSS" Created="21/06/2013" LastModified="24/06/2013">
+	
+	<TemplateConfiguration>
+		<_Name>Empty File</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>Web</_Category>
+		<LanguageName>CSS</LanguageName>
+		<_Description>Creates an empty CSS file.</_Description>
+		<DefaultFilename>EmptyCSSFile</DefaultFilename>
+	</TemplateConfiguration>
+	
+	<TemplateFiles>
+		<File DefaultExtension=".css" DefaultName="EmptyCSSFile" AddStandardHeader="True">
+		</File>
+	</TemplateFiles>
+	
+	<FileOptions/>
+	
+</Template>

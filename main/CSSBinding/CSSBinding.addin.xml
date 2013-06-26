@@ -44,9 +44,7 @@
 
 	<Extension path = "/MonoDevelop/Ide/FileTemplates">
 		<FileTemplate id = "CSharpEmptyFile" resource = "EmptyCSharpFile.xft.xml"/>
-		<!--<FileTemplate id = "EmptyCSSFile" resource = "EmptyCSSFile.xft.xml"/>-->
-		<FileTemplate id = "Test1" resource = "Test1.xft.xml"/>
-		<FileTemplate id = "CSharpAssemblyInfo" resource = "AssemblyInfo.xft.xml"/>	
+		<FileTemplate id = "CSharpAssemblyInfo" resource = "AssemblyInfo.xft.xml"/>
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
@@ -59,28 +57,14 @@
 		</Condition>
 	</Extension>
 
-	<Extension path = "/MonoDevelop/Ide/FileFilters">            
+	<Extension path = "/MonoDevelop/Ide/FileFilters">
 		<FileFilter id = "CSharp"
 		            insertbefore = "Assemblies"
 		            _label = "C# Files"
-		            extensions = "*.cs"/>	
+		            extensions = "*.cs"/>
 	</Extension>
 
-	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
-		<Condition id="ActiveLanguage" value="C#">
-			<Panel id = "CSharpCompilerOptionsPanel"
-			             _label = "C#"
-			             class = "MonoDevelop.CSharp.Project.CompilerOptionsPanel"/>
-		</Condition>
-	</Extension>
-
-	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/Compiler">
-		<Condition id="ActiveLanguage" value="C#">
-			<Panel id = "CSharpCodeGenerationPanel"
-			             _label = "Compiler"
-			             class = "MonoDevelop.CSharp.Project.CodeGenerationPanel"/>
-		</Condition>
-	</Extension>
+	
 
 	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
 		<LanguageBinding id    = "CSharp"
@@ -88,16 +72,7 @@
 		                 class = "MonoDevelop.CSharp.CSharpLanguageBinding" />
 	</Extension>
 
-	<Extension path = "/MonoDevelop/Ide/ReferenceFinder">
-		<ReferenceFinder supportedmimetypes = "text/x-csharp"
-		                 class = "MonoDevelop.CSharp.Refactoring.CSharpReferenceFinder" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
-		<DataType class = "MonoDevelop.CSharp.Project.CSharpCompilerParameters" />
-		<DataType class = "MonoDevelop.CSharp.Project.CSharpProjectParameters" />
-	</Extension>
-
+	
 	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
 		<!-- indent engine must be before the completion text editor engine,
 		otherwise stuff like
@@ -131,10 +106,6 @@
 		<MimeType id="text/x-csharp" _description="C# source code" icon="md-csharp-file" isText="true">
 			<File pattern="*.cs" />
 		</MimeType>
-		
-		<MimeType id="text/x-css" _description="CSS source code" icon="md-csharp-file" isText="true">
-			<File pattern="*.css" />
-		</MimeType>
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/CodeFormatters">
@@ -145,9 +116,6 @@
 		<Ambience mimeType="text/x-csharp" class = "MonoDevelop.CSharp.CSharpAmbience" />
 	</Extension>
 
-	<Extension path = "/MonoDevelop/TypeSystem/Parser">
-		<Parser class="MonoDevelop.CSharp.Parser.TypeSystemParser" mimeType = "text/x-csharp" />
-	</Extension>
 
 	<Extension path = "/MonoDevelop/TypeSystem/FoldingParser">
 		<Parser class = "MonoDevelop.CSharp.Parser.CSharpFoldingParser" mimeType="text/x-csharp" />
@@ -157,17 +125,7 @@
 		<Generator class="MonoDevelop.CSharp.Refactoring.CSharpCodeGenerator" mimeType = "text/x-csharp" />
 	</Extension>
 	
-	<Extension path = "/MonoDevelop/ProjectModel/PolicySets/Mono" >
-		<Policies resource="MonoCSharpPolicy.xml" />
-		<Policies resource="MonoNameConventionPolicy.xml" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/ProjectModel/PolicySets" >
-		<PolicySet id="KR" _name="K&amp;R style" allowDiffSerialize="false">
-			<Policies resource="KRCSharpPolicy.xml" />
-			<Policies resource="InvariantTextStylePolicy.xml" />
-		</PolicySet>
-	</Extension>
+	
 
 	<Extension path = "/MonoDevelop/ProjectModel/PolicySets" >
 		<PolicySet id="1TBS" _name="SharpDevelop style (1TBS)" allowDiffSerialize="false">
@@ -176,38 +134,9 @@
 		</PolicySet>
 	</Extension>
 
-	<Extension path = "/MonoDevelop/ProjectModel/PolicySets/VisualStudio" >
-		<Policies resource="AllmanCSharpPolicy.xml" />
-	</Extension>
+	
 
-	<Extension path = "/MonoDevelop/ProjectModel/PolicySets" >
-		<PolicySet id="Whitesmiths" _name="Whitesmiths style" allowDiffSerialize="false">
-			<Policies resource="WhitesmithsCSharpPolicy.xml" />
-			<Policies resource="InvariantTextStylePolicy.xml" />
-		</PolicySet>
-	</Extension>
-
-	<Extension path = "/MonoDevelop/ProjectModel/PolicySets" >
-		<PolicySet id="GNU" _name="GNU style" allowDiffSerialize="false">
-			<Policies resource="GNUCSharpPolicy.xml" />
-			<Policies resource="GNUTextStylePolicy.xml" />
-		</PolicySet>
-	</Extension>
-
-	<Extension path = "/MonoDevelop/ProjectModel/Gui/MimeTypePolicyPanels">
-		<Panel id = "CSharpFormatting" _label = "C# Format" mimeType="text/x-csharp" class = "MonoDevelop.CSharp.Formatting.CSharpFormattingPolicyPanel" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/Refactoring/CodeActions">
-		<Action mimeType="text/x-csharp"
-			_title = "Move type to another file"
-			_description = "Moves current type to another file that matches the name of the type."
-			class = "MonoDevelop.CSharp.Refactoring.CodeActions.MoveTypeToFile" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/Ide/TextEditorResolver">
-		<Resolver class = "MonoDevelop.CSharp.Resolver.TextEditorResolverProvider" mimeType="text/x-csharp" />
-	</Extension>
+	
 
 	<Extension path = "/MonoDevelop/Ide/Commands/TextEditor">
 		<Command id = "MonoDevelop.CSharp.Highlighting.MoveToUsagesCommand.PrevUsage"
@@ -234,22 +163,6 @@
 		         _label = "_Shrink selection"/>
 	</Extension>
 
-	<Extension path = "/MonoDevelop/Refactoring/CodeGenerators">
-		<Class class = "MonoDevelop.CodeGeneration.CreateConstructorGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.ReadonlyPropertyGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.PropertyGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.ImplementInterfaceMembersGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.OverrideMembersGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.ToStringGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.RaiseEventMethodGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.EqualityMembersGenerator" />
-		<Class class = "MonoDevelop.CodeGeneration.WriteLineGenerator" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/Refactoring/CodeActionSource">
-		<Source class ="MonoDevelop.CSharp.Refactoring.CodeActions.NRefactoryCodeActionSource"/>
-	</Extension>
-
 	<Extension path = "/MonoDevelop/Refactoring/CodeIssueSource">
 		<Source class ="MonoDevelop.CSharp.Refactoring.CodeIssues.NRefactoryCodeIssueSource"/>
 	</Extension>
@@ -260,39 +173,7 @@
 	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/SourceCode">
 		<Section id="NameConventions" _label="Name Conventions" fill = "true" class="MonoDevelop.CSharp.Refactoring.CodeIssues.NameConventionPanel" />
 	</Extension>
-	<Extension path = "/MonoDevelop/Ide/GlobalOptionsDialog/SourceCode">
-		<Section id="NameConventions" _label="Name Conventions" fill = "true" class="MonoDevelop.CSharp.Refactoring.CodeIssues.NameConventionPanel" />
-	</Extension>
-
-	<Extension path = "/MonoDevelop/SourceEditor2/TooltipProviders">
-		<Class id="LanguageItem" class="MonoDevelop.SourceEditor.LanguageItemTooltipProvider" />
-	</Extension>
-
-	<Module>
-	    <Runtime>
-	        <Import assembly="MonoDevelop.CSharpBinding.Autotools.dll"/>
-	    </Runtime>
-		<Dependencies>
-			<Addin id="Autotools" version="4.1.4"/>
-		</Dependencies>
-		<Extension path = "/MonoDevelop/Autotools/SimpleSetups">
-			<Class class="CSharpBinding.Autotools.CSharpAutotoolsSetup" />
-		</Extension>
-	</Module>
-
-	<Module>
-		<Runtime>
-			<Import assembly="MonoDevelop.CSharpBinding.AspNet.dll"/>
-		</Runtime>
-		<Dependencies>
-			<Addin id="AspNet" version="4.1.4"/>
-		</Dependencies>
-		<Extension path = "/MonoDevelop/Asp/CompletionBuilders">
-			<Class class = "MonoDevelop.CSharp.Completion.AspLanguageBuilder" />
-		</Extension>
-		<Extension path = "/MonoDevelop/Ide/ReferenceFinder">
-			<ReferenceFinder supportedmimetypes = "application/x-aspx,application/x-ascx,application/x-asax,application/x-ashx,application/x-asmx,application/x-asix"
-			                 class = "MonoDevelop.CSharp.Refactoring.ASPNetReferenceFinder" />
-		</Extension>
-	</Module>
+	
 </Addin>
+
+

@@ -101,6 +101,8 @@
 		              file     = "Templates/PartialViewPageRazor.xft.xml" />
 		<FileTemplate id       = "PreprocessedRazorTemplate"
 		              file     = "Templates/PreprocessedRazorTemplate.xft.xml" />
+		<FileTemplate id       = "EmptyCSSFile"
+		              file     = "Templates/EmptyCSSFile.xft.xml" />
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">

@@ -90,6 +90,8 @@
 		              resource = "WebContentForm-CodeBehind.xft.xml" />
 		<FileTemplate id       = "WebContentForm"
 		              resource = "WebContentForm.xft.xml" />
+		<FileTemplate id       = "EmptyCSSFile"
+		              resource = "EmptyCSSFile.xft.xml" />
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/FileTemplateTypes">

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Template Originator="Mike Krueger" Language="C#" Created="3/09/2001" LastModified="3/09/2001">
+	
+	<TemplateConfiguration>
+		<_Name>Test1 Name</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>General</_Category>
+		<LanguageName>C#</LanguageName>
+		<_Description>Test description</_Description>
+		<DefaultFilename>Test1</DefaultFilename>
+	</TemplateConfiguration>
+	
+	<TemplateFiles>
+		<File DefaultExtension=".cs" DefaultName="Test1" AddStandardHeader="True">
+		</File>
+	</TemplateFiles>
+	
+	<FileOptions/>
+	
+</Template>
